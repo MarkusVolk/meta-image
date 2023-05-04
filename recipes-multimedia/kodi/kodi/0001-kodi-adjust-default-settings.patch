@@ -1,0 +1,24 @@
+From ef8dd10395f5d753af867c0c44ae32e2d71af29e Mon Sep 17 00:00:00 2001
+From: MarkusVolk <f_l_k@t-online.de>
+Date: Tue, 7 Sep 2021 21:25:43 +0200
+Subject: [PATCH] kodi: adjust default settings
+
+Signed-off-by: MarkusVolk <f_l_k@t-online.de>
+
+---
+ system/settings/settings.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/system/settings/settings.xml b/system/settings/settings.xml
+index 358225b8d1..c02ed79917 100755
+--- a/system/settings/settings.xml
++++ b/system/settings/settings.xml
+@@ -3443,7 +3443,7 @@
+         </setting>
+         <setting id="addons.unknownsources" type="boolean" label="36615" help="36616">
+           <level>0</level>
+-          <default>false</default>
++          <default>true</default>
+           <control type="toggle" />
+         </setting>
+         <setting id="addons.updatemode" type="integer" parent="addons.unknownsources" label="36422" help="36423">
