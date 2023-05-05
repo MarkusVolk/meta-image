@@ -16,8 +16,8 @@ RDEPENDS:${PN} = "yquake2"
 inherit autotools-brokensep pkgconfig
 
 S = "${WORKDIR}/git"
-SRCREV = "925ed6a5478f61f082d08b3c69627fb3b41a9205"
-PV = "1.0.2"
+SRCREV = "bcd0cd9e56615dd774ad7e07e7a266be283ef84e"
+PV = "1.0.5"
 
 do_install() {
 	install -d ${D}${libexecdir}/quake2

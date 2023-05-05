@@ -26,8 +26,8 @@ SRC_URI = " \
     file://vkquake.svg \
 "
 
-PV = "1.22.3"
-SRCREV = "358e50e2ac86def6d99ced3b6be5fdf276d3981c"
+PV = "1.30.1"
+SRCREV = "6bc47356258cc901b2643a1bf4e47a12199a869a"
 S = "${WORKDIR}/git"
 
 do_install() {
