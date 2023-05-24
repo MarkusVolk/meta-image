@@ -16,13 +16,3 @@ PACKAGECONFIG:append = " \
 
 KODIGRAPHICALBACKEND = "wayland"
 KODISYSTEMDAUTOSTART = "disable"
-
-KODI_PLUGINS_INSTALL ?= " \
-	kodi-addon-inputstream-adaptive \
-	kodi-addon-inputstream-ffmpegdirect \
-	kodi-addon-inputstreamhelper \
-	kodi-addon-inputstream-rtmp \
-	kodi-addon-peripheral-joystick \
-	kodi-addon-vfs-libarchive \
-	kodi-addon-vfs-rar \
-"
