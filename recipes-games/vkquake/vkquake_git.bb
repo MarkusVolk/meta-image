@@ -40,3 +40,5 @@ do_install() {
 }
 
 FILES:${PN} = "${bindir} ${datadir}"
+
+CFLAGS += "-Wno-maybe-uninitialized"
