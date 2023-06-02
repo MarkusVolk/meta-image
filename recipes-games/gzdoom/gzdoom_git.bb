@@ -31,6 +31,7 @@ inherit cmake pkgconfig gtk-icon-cache
 SRC_URI = " \
     git://github.com/ZDoom/gzdoom.git;protocol=https;nobranch=1 \
     file://0001-CMakeLists.txt-compile-fix.patch \
+    file://0001-vk_mem_alloc-fix-for-gcc13.patch \
     file://gzdoom.svg \
     file://gzdoom.desktop \
 "
