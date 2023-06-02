@@ -1,0 +1,48 @@
+From 17f8a78141d53a3c103d1834744a9784e7030f8e Mon Sep 17 00:00:00 2001
+From: Markus Volk <f_l_k@t-online.de>
+Date: Fri, 2 Jun 2023 15:05:55 +0200
+Subject: [PATCH] ZVulkan: fix for gcc13
+
+Signed-off-by: Markus Volk <f_l_k@t-online.de>
+---
+ libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h | 2 ++
+ libraries/ZVulkan/src/vulkanbuilders.cpp                      | 2 +-
+ libraries/ZVulkan/src/vulkanswapchain.cpp                     | 2 +-
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h b/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h
+index fd4472286b..7189d0e7a7 100644
+--- a/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h
++++ b/libraries/ZVulkan/include/zvulkan/vk_mem_alloc/vk_mem_alloc.h
+@@ -20,6 +20,8 @@
+ // THE SOFTWARE.
+ //
+ 
++#include <cstdio>
++
+ #ifndef AMD_VULKAN_MEMORY_ALLOCATOR_H
+ #define AMD_VULKAN_MEMORY_ALLOCATOR_H
+ 
+diff --git a/libraries/ZVulkan/src/vulkanbuilders.cpp b/libraries/ZVulkan/src/vulkanbuilders.cpp
+index bfa138080c..c1d6a84f69 100644
+--- a/libraries/ZVulkan/src/vulkanbuilders.cpp
++++ b/libraries/ZVulkan/src/vulkanbuilders.cpp
+@@ -1,4 +1,4 @@
+-
++#include <stdexcept>
+ #include "vulkanbuilders.h"
+ #include "vulkansurface.h"
+ #include "vulkancompatibledevice.h"
+diff --git a/libraries/ZVulkan/src/vulkanswapchain.cpp b/libraries/ZVulkan/src/vulkanswapchain.cpp
+index 9162109c42..ba528a95ca 100644
+--- a/libraries/ZVulkan/src/vulkanswapchain.cpp
++++ b/libraries/ZVulkan/src/vulkanswapchain.cpp
+@@ -1,4 +1,4 @@
+-
++#include <stdexcept>
+ #include "vulkanswapchain.h"
+ #include "vulkanobjects.h"
+ #include "vulkansurface.h"
+-- 
+2.34.1
+
