@@ -94,7 +94,8 @@ WSYSTEM_CONF ?= " \
 	xkeyboard-config \
 	xorg-minimal-fonts \
 	xprop \
-	xwayland \	
+	xwayland \
+	${@bb.utils.contains('HOST_ARCH', 'x86_64', 'onevpl-intel-gpu libva-intel-utils', '', d)} \
 "
 
 WSERVICES ?= " \
