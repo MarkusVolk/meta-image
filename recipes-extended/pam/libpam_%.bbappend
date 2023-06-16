@@ -2,7 +2,7 @@ do_install:append() {
 	echo "LANG=en_US.UTF-8" >> ${D}${sysconfdir}/environment
 	echo "LC_ALL=en_US.UTF-8" >> ${D}${sysconfdir}/environment
 	echo "SHELL=/bin/bash" >> ${D}${sysconfdir}/environment
-	echo "SDL_VIDEODRIVER=wayland" >> ${D}${sysconfdir}/environment
+	echo "SDL_VIDEODRIVER=x11" >> ${D}${sysconfdir}/environment
 	echo "XDG_CONFIG_DIRS=/etc/xdg/" >> ${D}${sysconfdir}/environment
 	echo "XDG_DATA_DIRS=/usr/share" >> ${D}${sysconfdir}/environment
 	echo "XDG_RUNTIME_DIR=/run/user/1000" >> ${D}${sysconfdir}/environment
