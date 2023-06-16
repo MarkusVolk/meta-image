@@ -11,8 +11,11 @@ WGUI_APPS:append = " \
 "
 
 WCONSOLE_TOOLS:append = " \
+	wl-clipboard \
 	autotiling-rs \
 	foot \
+	hyprpaper \
+	hyprpicker \
 	swaybg \
 	wlr-randr \
 	wob \
