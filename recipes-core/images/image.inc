@@ -95,7 +95,7 @@ WSYSTEM_CONF ?= " \
 	xorg-minimal-fonts \
 	xprop \
 	xwayland \
-	${@bb.utils.contains('HOST_ARCH', 'x86_64', 'onevpl-intel-gpu libva-intel-utils', '', d)} \
+	${@bb.utils.contains('HOST_ARCH', 'x86_64', 'onevpl-intel-gpu libva-intel-utils gstreamer1.0-vaapi', '', d)} \
 "
 
 WSERVICES ?= " \
