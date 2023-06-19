@@ -5,7 +5,6 @@ WGUI_APPS:append = " \
 	mako \
 	nwg-displays \
 	nwg-launchers \
-	sirula \
 	swappy \
 	waybar \
 "
