@@ -3,6 +3,8 @@ From: Markus Volk <f_l_k@t-online.de>
 Date: Sun, 8 Jan 2023 02:17:48 +0100
 Subject: [PATCH] getty.service.in: configuration patch for autologin
 
+Upstream-Status: Inappropriate [configuration]
+
 ---
  units/getty@.service.in | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
