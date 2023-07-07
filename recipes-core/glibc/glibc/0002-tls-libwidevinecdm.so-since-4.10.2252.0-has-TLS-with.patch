@@ -6,6 +6,7 @@ Subject: [PATCH 2/2] tls: libwidevinecdm.so: since 4.10.2252.0 has TLS with
  to use dlopen again. Tests by changing TLS_TCB_ALIGN directly showed up some
  random crashes. Reverence: https://lkml.org/lkml/2020/7/3/754
 
+Upstream-Status: Inappropriate
 ---
  elf/dl-tls.c | 5 +++++
  1 file changed, 5 insertions(+)
