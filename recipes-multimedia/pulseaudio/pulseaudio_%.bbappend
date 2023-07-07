@@ -1,6 +1,3 @@
-PACKAGES += "pulseaudio-user-service"
-FILES:${PN}-user-service = "${MAIN_USER_DEFAULT_TARGET_WANTS} ${MAIN_USER_SOCKETS_TARGET_WANTS}"
-RECOMMENDS:${PN}-server = "pulseaudio-user-service"
 RRECOMMENDS:${PN} += "alsa-utils"
 
 inherit main-user useradd
@@ -23,7 +20,6 @@ do_install:append() {
             ln -fs ${systemd_user_unitdir}/pulseaudio.service ${D}${MAIN_USER_DEFAULT_TARGET_WANTS}/pulseaudio.service
             ln -fs ${systemd_user_unitdir}/pulseaudio.socket ${D}${MAIN_USER_SOCKETS_TARGET_WANTS}/pulseaudio.socket
         fi
-        chown ${MAIN_USER_NAME}:${MAIN_USER_NAME} -R ${D}${MAIN_USER_HOMEDIR}/
     fi
 }
 

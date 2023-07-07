@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/systemd:"
 
-inherit main-user-base
+inherit main-user
 
 SRC_URI:append = "file://0001-getty.service.in-configuration-patch-for-autologin.patch"
 

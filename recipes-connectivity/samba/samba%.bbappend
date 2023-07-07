@@ -2,19 +2,40 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/samba:"
 
 RDEPENDS:${PN} += "glibc-gconv-ibm850"
 
-inherit main-user-base
-
-SRC_URI:append = " \
-    file://samba \
-    file://smb.conf \
-"
+inherit main-user
 
 do_install:append() {
     install -d ${D}${sysconfdir}/pam.d
-    install -m 0644 ${WORKDIR}/samba ${D}${sysconfdir}/pam.d
-    install -m 0644 ${WORKDIR}/smb.conf ${D}${sysconfdir}/samba
-    sed -i "s|@user@|${MAIN_USER_NAME}|" ${D}${sysconfdir}/samba/smb.conf
-    sed -i "s|@path@|${MAIN_USER_HOMEDIR}/Public|" ${D}${sysconfdir}/samba/smb.conf
+    cat >${D}${sysconfdir}/pam.d/samba <<EOF
+##%PAM-1.0
+ auth       required    /lib/security/pam_unix.so shadow nullok
+ auth       required    /lib/security/pam_shells.so
+ account    required    /lib/security/pam_unix.so
+ session    required    /lib/security/pam_unix.so
+EOF
+    cat >${D}${sysconfdir}/samba/smb.conf <<EOF
+[global]
+workgroup = WORKGROUP
+security = user
+printcap name = /dev/null
+guest account = ${MAIN_USER_NAME}
+smb ports = 139 445
+map to guest = Bad User
+enable privileges = yes
+obey pam restrictions = yes
+unix password sync = yes
+pam password change = yes
+server multi channel support = yes
+unix extensions = yes
+
+[Public]
+path = ${MAIN_USER_HOMEDIR}/Public
+read only = no
+force user = ${MAIN_USER_NAME}
+guest ok = no
+writeable = yes
+available = yes
+EOF
     sed -i "s|/var/run|/run|" ${D}/etc/tmpfiles.d/samba.conf
 }
 

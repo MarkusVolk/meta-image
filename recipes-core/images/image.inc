@@ -118,7 +118,6 @@ WSERVICES ?= " \
 	nfs-utils-client \
 	ntp \
 	pipewire \
-	pulseaudio-user-service \
 	rpcbind \
 	rtkit \
 	samba \
