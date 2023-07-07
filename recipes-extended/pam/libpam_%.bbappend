@@ -10,4 +10,7 @@ do_install:append() {
 	echo "XDG_SESSION_TYPE=wayland" >> ${D}${sysconfdir}/environment
 	echo "XKB_DEFAULT_LAYOUT=en" >> ${D}${sysconfdir}/environment
 	echo "GTK_THEME=adw-gtk3-dark" >> ${D}${sysconfdir}/environment
+	echo "QT_AUTO_SCREEN_SCALE_FACTOR=1" >> ${D}${sysconfdir}/environment
+	echo "QT_QPA_PLATFORM=wayland;xcb" >> ${D}${sysconfdir}/environment
+	echo "QT_QPA_PLATFORMTHEME=gnome" >> ${D}${sysconfdir}/environment
 }
