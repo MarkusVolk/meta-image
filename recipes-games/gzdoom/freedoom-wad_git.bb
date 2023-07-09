@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://COPYING.adoc;md5=990462e5b1ba9598e23dff2b9608db60"
 
 DEPENDS = "deutex-native python3-pillow-native"
 
-inherit autotools-brokensep python3native
+inherit autotools-brokensep
 
 SRC_URI = " \
     git://github.com/freedoom/freedoom.git;protocol=https;branch=master \
