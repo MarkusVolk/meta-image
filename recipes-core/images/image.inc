@@ -141,12 +141,27 @@ WGLIBC ?= " \
 	localedef \
 "
 
+WBUILD_APPLIANCE ?= " \
+        chrpath cpio diffstat lz4 patch zstd wget xcursorgen \
+	ldd glibc-utils ldconfig ldso libnss-db glibc-thread-db \
+	libsotruss nscd rpcsvc-proto diffutils ccache ldd file tcl \
+	zip unzip elfutils file libgcc libgomp meson cmake \
+	pkgconfig libx11 libxrandr libxcursor libxt libxext git-perltools \
+	python3-modules perl-modules \
+	${@bb.utils.contains('TCLIBC', 'glibc', 'libxcrypt-dev', '', d)} \
+	packagegroup-core-sdk \
+	packagegroup-core-buildessential \
+	openjdk \
+	inkscape \
+"
+
 IMAGE_INSTALL += " \
 	${WWINDOW_MANAGER} \
 	${WGUI_APPS} \
 	${WCONSOLE_TOOLS} \
 	${WSYSTEM_CONF} \
 	${WSERVICES} \
+	${@bb.utils.contains('BUILD_APPLIANCE', '1', '${WBUILD_APPLIANCE}', '', d)} \
 	${@bb.utils.contains('TCLIBC', 'glibc', '${WGLIBC}', '', d)} \
 	${@bb.utils.contains('LICENSE_FLAGS_ACCEPTED', 'commercial', '${WCOMMERCIAL}', '', d)} \
 "
