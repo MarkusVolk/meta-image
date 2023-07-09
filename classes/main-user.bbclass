@@ -30,7 +30,7 @@ RDEPENDS:${PN} += "bash"
 
 inherit useradd extrausers
 
-GROUPADD_PARAM:${PN} += "i2c; netdev; lpadmin; flatpak"
+GROUPADD_PARAM:${PN} += "i2c; netdev; lpadmin; flatpak; render"
 
 USERADD_PACKAGES += "${PN}"
 USERADD_PARAM:${PN} += " \
