@@ -1,5 +1,5 @@
 MAIN_USER_ID ??= "1000"
-MAIN_USER_GROUPS ??= "audio,dialout,disk,i2c,input,netdev,plugdev,shutdown,sudo,tty,users,video,wheel,lpadmin,lp"
+MAIN_USER_GROUPS ??= "audio,dialout,disk,flatpak,i2c,input,netdev,plugdev,render,shutdown,sudo,users,video,wheel,lpadmin,lp"
 MAIN_USER_NAME ??= "user"
 MAIN_USER_GROUP ??= "${MAIN_USER_NAME}"
 MAIN_USER_REALNAME ??= "${MAIN_USER_NAME}"
