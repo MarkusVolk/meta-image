@@ -1,6 +1,6 @@
 RRECOMMENDS:${PN} += "alsa-utils"
 
-SYSTEMD_AUTO_ENABLE_${PN}-server = "disable"
+SYSTEMD_AUTO_ENABLE:${PN}-server = "disable"
 
 inherit main-user
 
