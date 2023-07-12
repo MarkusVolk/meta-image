@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=90cffc6a4f1bcbb66067c81f5512c14f"
 
 SRC_URI = "git://github.com/keeferrourke/capitaine-cursors.git;protocol=https;branch=master"
 
-DEPENDS += "bc-native"
+DEPENDS += "bc-native xcursorgen-native"
 
 PV = "4"
 SRCREV = "06c88433662a4004cf56a6e471b523a0a8880be0"
