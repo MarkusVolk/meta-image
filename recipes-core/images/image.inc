@@ -67,6 +67,7 @@ WSYSTEM_CONF ?= " \
 	cups-pk-helper \
 	exfatprogs \
 	gstreamer1.0-libav \
+	gstreamer1.0-plugins-good \
 	gstreamer1.0-plugins-bad \
 	gstreamer1.0-plugins-ugly \
 	gtk4-printbackend-cups \
@@ -142,7 +143,7 @@ WGLIBC ?= " \
 "
 
 WBUILD_APPLIANCE ?= " \
-        chrpath cpio diffstat lz4 patch zstd wget xcursorgen \
+        chrpath cpio diffstat lz4 patch zstd wget  \
 	ldd ldconfig ldso libnss-db git-perltools file tcl \
 	libsotruss nscd rpcsvc-proto diffutils ccache ldd \
 	zip unzip elfutils file libgcc libgomp meson cmake \
