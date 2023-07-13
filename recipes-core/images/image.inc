@@ -67,9 +67,10 @@ WSYSTEM_CONF ?= " \
 	cups-pk-helper \
 	exfatprogs \
 	gstreamer1.0-libav \
-	gstreamer1.0-plugins-good \
-	gstreamer1.0-plugins-bad \
-	gstreamer1.0-plugins-ugly \
+	gstreamer1.0-plugins-base-meta \
+	gstreamer1.0-plugins-good-meta \
+	gstreamer1.0-plugins-bad-meta \
+	gstreamer1.0-plugins-ugly-meta \
 	gtk4-printbackend-cups \
 	gtk4-printbackend-file \
 	libcanberra-pulse \
