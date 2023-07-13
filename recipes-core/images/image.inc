@@ -144,12 +144,12 @@ WGLIBC ?= " \
 "
 
 WBUILD_APPLIANCE ?= " \
-        chrpath cpio diffstat lz4 patch zstd wget  \
+        chrpath cpio diffstat lz4 patch zstd wget bash-completion \
 	ldd ldconfig ldso libnss-db git-perltools file tcl \
 	libsotruss nscd rpcsvc-proto diffutils ccache ldd \
 	zip unzip elfutils file libgcc libgomp meson cmake \
 	pkgconfig libx11 libxrandr libxcursor libxt libxext \
-	python3-modules perl-modules \
+	python3-modules perl-modules git-bash-completion \
 	${@bb.utils.contains('TCLIBC', 'glibc', 'libxcrypt-dev glibc-thread-db glibc-utils', '', d)} \
 	packagegroup-core-sdk \
 	packagegroup-core-buildessential \
