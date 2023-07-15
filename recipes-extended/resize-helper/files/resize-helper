@@ -35,9 +35,9 @@ BTRFS=$(which btrfs) || { echo "E: You must have btrfs" && exit 1; }
 BLKID=$(which blkid) || { echo "E: You must have blkid" && exit 1; }
 
 # find root device
-ROOT_DEVICE=$(findmnt / -o source -n)
+ROOT_DEVICE=$(findmnt /home -o source -n)
 # find root fstype
-ROOT_FSTYPE=$(findmnt / -o fstype -n)
+ROOT_FSTYPE=$(findmnt /home -o fstype -n)
 # prune root device (for example UUID)
 ROOT_DEVICE=$(realpath ${ROOT_DEVICE})
 # get the partition number and type
@@ -63,4 +63,4 @@ echo "yes" | ${PARTED} ---pretend-input-tty ${DEVICE} resizepart ${PART_ENTRY_NU
 ${PARTPROBE}
 
 [ "$ROOT_FSTYPE" = "ext4" ] && ${RESIZE2FS} "${ROOT_DEVICE}"
-[ "$ROOT_FSTYPE" = "btrfs" ] && ${BTRFS} filesystem resize max /
+[ "$ROOT_FSTYPE" = "btrfs" ] && ${BTRFS} filesystem resize max /home

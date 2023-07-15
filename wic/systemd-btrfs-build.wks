@@ -6,6 +6,7 @@
 
 part /boot --source bootimg-efi --sourceparams="loader=systemd-boot,initrd=microcode.cpio" --label msdos --active --align 1024 --use-uuid
 part / --source rootfs --fstype=btrfs --label platform --align 1024 --use-uuid
+part swap --size 32G --label swap --fstype=swap --use-uuid
 part /home --source rootfs --rootfs-dir=${IMAGE_ROOTFS}/../home --fstype=btrfs  --size 200 --label home --use-uuid
 
 bootloader --ptable gpt --timeout=5 --append=" rootfstype=btrfs "

@@ -167,3 +167,14 @@ IMAGE_INSTALL += " \
 	${@bb.utils.contains('TCLIBC', 'glibc', '${WGLIBC}', '', d)} \
 	${@bb.utils.contains('LICENSE_FLAGS_ACCEPTED', 'commercial', '${WCOMMERCIAL}', '', d)} \
 "
+
+ROOTFS_POSTPROCESS_COMMAND += "move_homedir;remove_boot;"
+
+move_homedir() {
+    [ -d ${WORKDIR}/home ] && rm -rf ${WORKDIR}/home
+    mv -f ${WORKDIR}/rootfs/home ${WORKDIR}
+}
+
+remove_boot() {
+    [ -d ${WORKDIR}/rootfs/boot ] && rm -rf ${WORKDIR}/rootfs/boot
+}
