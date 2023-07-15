@@ -37,13 +37,12 @@ inherit cmake pkgconfig gtk-icon-cache
 SRC_URI = " \
     git://github.com/coelckers/Raze.git;protocol=https;nobranch=1 \
     file://0001-CMakeLists.txt-compile-fix.patch \
-    file://0001-ZVulkan-fix-for-gcc13.patch \
     file://raze.svg \
     file://raze.desktop \
 "
 
 PV = "1.7.1"
-SRCREV = "7cd42e740dbba1d1378771d90d15f0256171fded"
+SRCREV = "80ac9f64167922602e3d95c012ca271d8b7c37bf"
 S = "${WORKDIR}/git"
 
 EXTRA_OECMAKE = "-DCLANG_FORMAT_CMD=OFF"
