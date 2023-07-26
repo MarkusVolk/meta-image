@@ -77,6 +77,7 @@ WSYSTEM_CONF ?= " \
 	linux-firmware \
 	nfs-export-public \
 	packagegroup-fonts-truetype \
+	python3-requests \
 	resize-helper \
 	shared-mime-info \
 	shared-mime-info-data \
@@ -95,7 +96,6 @@ WSYSTEM_CONF ?= " \
 	xdg-desktop-portal \
 	xkeyboard-config \
 	xorg-minimal-fonts \
-	xprop \
 	xwayland \
 	${@bb.utils.contains('HOST_ARCH', 'x86_64', 'onevpl-intel-gpu libva-intel-utils gstreamer1.0-vaapi', '', d)} \
 "
