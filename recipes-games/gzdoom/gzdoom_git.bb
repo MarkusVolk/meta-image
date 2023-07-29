@@ -23,7 +23,7 @@ DEPENDS = " \
 
 RRECOMMENDS:${PN} = " \
 	doom1-wad doom2-wad finaldoom-evilution-wad finaldoom-plutonia-wad  \
-	hacx-wad hexen-wad heretic-wad strife-wad adventures-of-square-wad \
+	hacx-wad hexen-wad heretic-wad strife-wad adventures-of-square-wad freedoom-wad \
 "
 
 inherit cmake pkgconfig gtk-icon-cache
