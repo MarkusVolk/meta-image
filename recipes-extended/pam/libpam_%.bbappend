@@ -13,6 +13,4 @@ do_install:append() {
 	echo "QT_AUTO_SCREEN_SCALE_FACTOR=1" >> ${D}${sysconfdir}/environment
 	echo "QT_QPA_PLATFORM=wayland;xcb" >> ${D}${sysconfdir}/environment
 	echo "QT_QPA_PLATFORMTHEME=gnome" >> ${D}${sysconfdir}/environment
-	echo "GDK_SCALE=2" >> ${D}${sysconfdir}/environment
-	echo "XCURSOR_SIZE=32" >> ${D}${sysconfdir}/environment
 }
