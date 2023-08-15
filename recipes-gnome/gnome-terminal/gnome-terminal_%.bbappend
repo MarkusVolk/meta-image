@@ -1,1 +1,1 @@
-PACKAGECONFIG:append = " nautilus search-provider"
+PACKAGECONFIG:append = " nautilus"
