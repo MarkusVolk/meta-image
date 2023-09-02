@@ -1,0 +1,1 @@
+PCI_CONF_FLAG = "DNS=yes SHARED=yes STRIP= LIBDIR=${libdir}"
