@@ -4,7 +4,7 @@ PACKAGECONFIG:remove = "systemd-system-service"
 
 inherit main-user
 
-do_install:append() {
+do_install:append:class-target() {
     ln -fs ${systemd_user_unitdir}/pipewire.service ${D}${MAIN_USER_DEFAULT_TARGET_WANTS}/pipewire.service
     ln -fs ${systemd_user_unitdir}/pipewire.socket ${D}${MAIN_USER_SOCKETS_TARGET_WANTS}/pipewire.socket
     if ${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', 'true', 'false', d)}; then

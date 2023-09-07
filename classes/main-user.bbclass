@@ -15,13 +15,13 @@ MAIN_USER_HOMEDIR ?= "/home/${MAIN_USER_NAME}"
 MAIN_USER_DEFAULT_TARGET_WANTS ?= "${MAIN_USER_HOMEDIR}/.config/systemd/user/default.target.wants"
 MAIN_USER_SOCKETS_TARGET_WANTS ?= "${MAIN_USER_HOMEDIR}/.config/systemd/user/sockets.target.wants"
 
-do_install:prepend() {
+do_install:prepend:class-target() {
 	install -d ${D}${MAIN_USER_HOMEDIR}
 	install -d ${D}${MAIN_USER_DEFAULT_TARGET_WANTS}
 	install -d ${D}${MAIN_USER_SOCKETS_TARGET_WANTS}
 }
 
-do_install:append() {
+do_install:append:class-target() {
 	chown ${MAIN_USER_NAME}:${MAIN_USER_NAME} -R ${D}${MAIN_USER_HOMEDIR}
 }
 
