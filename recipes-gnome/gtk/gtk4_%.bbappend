@@ -1,1 +1,1 @@
-PACKAGECONFIG:append:class-target = " cups iso-codes colord"
+PACKAGECONFIG:append:class-target = " cups iso-codes colord tracker cloudproviders"
