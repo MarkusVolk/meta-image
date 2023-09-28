@@ -5,6 +5,7 @@ WGUI_APPS:append = " \
 	mako \
 	nwg-displays \
 	nwg-launchers \
+	polkit-gnome \
 	swappy \
 	waybar \
 "
