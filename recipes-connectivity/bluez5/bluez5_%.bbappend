@@ -7,5 +7,6 @@ do_install:append() {
 [General]
 DiscoverableTimeout = 60
 Experimental = true
+ControllerMode = bredr
 EOF
 }
