@@ -1,5 +1,3 @@
-PACKAGECONFIG[gallium-llvm] = "-Dllvm=enabled -Dshared-llvm=enabled, -Dllvm=disabled, clang clang-native elfutils"
-
 PACKAGECONFIG:append:class-target = " vulkan-beta glvnd"
 PACKAGECONFIG:append:rpi:class-target = " broadcom"
 PACKAGECONFIG:append:aarch64:class-target = " panfrost"
