@@ -33,8 +33,8 @@ SRC_URI = " \
     file://0002-Do-not-adjust-compiler-flags.patch \
 "
 
-PV = "1.17.16"
-SRCREV = "9909f5910da42c86322d717783768c4c5130b79f"
+PV = "1.17.21"
+SRCREV = "56a6c8284cbbd5401a947480097d0256eff9ebd8"
 S = "${WORKDIR}/git"
 
 # Workaround sdl2 wayland issue if starting in fullscreen mode 
