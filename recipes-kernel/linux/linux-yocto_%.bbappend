@@ -8,8 +8,10 @@ SRC_URI:append = " \
     file://i2c.cfg \
     ${@bb.utils.contains('BUILD_APPLIANCE', '1', 'file://storage.cfg', '', d)} \
     file://touchpad.cfg \
-    file://gfx.cfg \
     ${@bb.utils.contains('HOST_ARCH', 'x86_64', 'file://virt.cfg', '', d)} \
     file://systemd.cfg \
 "
 
+SRC_URI:append:x86-64 = " \
+    file://gfx.cfg \
+"
