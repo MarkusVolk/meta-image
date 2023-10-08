@@ -11,6 +11,8 @@ DEPENDS = " \
     bdwgc \
     boost \
     cairo \
+    gdk-pixbuf \
+    glib-2.0 \
     glib-2.0-native \
     gsl \
     gspell \
