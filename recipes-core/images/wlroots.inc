@@ -1,5 +1,4 @@
 WGUI_APPS:append = " \
-	azote \
 	blueman \
 	iwgtk \
 	mako \
@@ -8,13 +7,13 @@ WGUI_APPS:append = " \
 	polkit-gnome \
 	swappy \
 	waybar \
+	waypaper \
 "
 
 WCONSOLE_TOOLS:append = " \
 	wl-clipboard \
 	autotiling-rs \
 	foot \
-	hyprpaper \
 	hyprpicker \
 	swaybg \
 	wlr-randr \
