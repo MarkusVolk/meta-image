@@ -1,14 +1,17 @@
 SUMMARY = "Tela circle Icon Theme."
 LICENSE = "GPL-3.0-only & Apache-2.0"
-LIC_FILES_CHKSUM = "file://COPYING.md;md5=63a90cb17067bf22a23a4b6bda1ad6e5"
+LIC_FILES_CHKSUM = " \
+	file://${COREBASE}/meta/files/common-licenses/GPL-3.0-only;md5=c79ff39f19dfec6d293b95dea7b07891 \
+	file://${COREBASE}/meta/files/common-licenses/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10 \
+"
 
 SRC_URI = " \
 	git://github.com/vinceliuice/Tela-circle-icon-theme.git;protocol=https;branch=master \
 	file://0001-install.sh-dont-rename-themes-using-spaces.patch \
 "
 
-PV = "2023-07-27"
-SRCREV = "855dad169924d0cbf5a6d0b707f36c88f8c49934"
+PV = "2023-10-28"
+SRCREV = "cb854a6287e200790566397c88f90e8f32c21cc6"
 S = "${WORKDIR}/git"
 
 inherit gtk-icon-cache
