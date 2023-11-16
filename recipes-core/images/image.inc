@@ -103,6 +103,9 @@ WSYSTEM_CONF ?= " \
 WSERVICES ?= " \
 	autofs \
 	avahi-utils \
+	avahi-autoipd \
+	avahi-daemon \
+	avahi-dnsconfd \
 	cifs-utils \
 	cups \
 	cups-lib \
