@@ -71,7 +71,7 @@ WSYSTEM_CONF ?= " \
 	gstreamer1.0-plugins-good-meta \
 	gstreamer1.0-plugins-bad-meta \
 	gstreamer1.0-plugins-ugly-meta \
-	gtk4-printbackend-cups \
+	gtk3-printbackend-file \
 	gtk4-printbackend-file \
 	libcanberra-pulse \
 	linux-firmware \
