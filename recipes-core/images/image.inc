@@ -73,6 +73,8 @@ WSYSTEM_CONF ?= " \
 	gstreamer1.0-plugins-ugly-meta \
 	gtk3-printbackend-file \
 	gtk4-printbackend-file \
+	gtk3-printbackend-cups \
+	gtk4-printbackend-cups \
 	libcanberra-pulse \
 	linux-firmware \
 	nfs-export-public \
