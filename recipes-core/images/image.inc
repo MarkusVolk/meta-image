@@ -158,7 +158,7 @@ WBUILD_APPLIANCE ?= " \
 	${@bb.utils.contains('TCLIBC', 'glibc', 'libxcrypt-dev glibc-thread-db glibc-utils', '', d)} \
 	packagegroup-core-sdk \
 	packagegroup-core-buildessential \
-	openjdk-20 \
+	openjdk-21 \
 	inkscape \
 "
 
